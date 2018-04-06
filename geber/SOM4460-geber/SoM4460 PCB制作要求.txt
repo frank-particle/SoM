@@ -1,0 +1,11 @@
+             PCB制作要求
+
+PCB制板文件名：SoM4460-geber.rar
+板层 2层板
+板厚：0.8mm
+板材：FR4
+表面处理：表面焊盘镀金 
+
+板层排列：
+.GTL    TOP顶层
+.GBL    bottom底层

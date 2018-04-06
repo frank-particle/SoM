@@ -1,0 +1,11 @@
+             PCB制作要求
+
+PCB制板文件名：SoM-BOTTOM-geber.rar
+板层 2层板
+板厚：1.6mm
+板材：FR4
+表面处理：金属孔不塞绿油  
+
+板层排列：
+.GTL    TOP顶层
+.GBL    bottom底层

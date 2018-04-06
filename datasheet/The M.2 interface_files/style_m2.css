@@ -1,0 +1,698 @@
+
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300);
+
+/* ACHTUNG: diese Datei wurde für U.2 / NVMe / M.2 gestaltet. Allerdings wurden dann
+die Themen geteilt in 1. U.2/NVMe und 2. M.2 --- das heißt, hier in dieser CSS viele Angaben die eigtl. für U.2/NVMe konzipiert... ########################### 
+**/	
+
+/* start general ########################### 
+**/	
+
+
+
+html {
+		overflow-y: scroll;  
+} 
+
+.clear { clear:both; }
+
+body {
+	color: black;	
+	background:#3a3e47;
+	background:#4f5667;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-weight: 300;
+	font-size: 1.05em;
+	}
+	
+p { 
+	line-height:1.35em; 
+	text-align:justify;
+	-moz-hyphens: auto;
+   -o-hyphens: auto;
+   -webkit-hyphens: auto;
+   -ms-hyphens: auto;
+   hyphens: auto;
+ 
+	}
+	
+/*topline_px span nur temporÃ¤r zur anzeige device-width*/
+#topline_px { width:50px;height:20px;}
+#topline_px span {  
+		font-size: 1.5em; 
+		color:red;
+		}
+	
+
+#wrapper {
+	max-width: 950px;/*achtung, die folgenden %-berechnungen haben von diesen px MINUS padding rechts und links auszugehen!!! */
+	margin: 0 auto;
+	margin-top:20px;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	-webkit-box-shadow: 0 0 15px rgba(0,0,0,1);
+	-moz-box-shadow: 0 0 15px rgba(0,0,0,1);
+	box-shadow: 0 0 15px rgba(0,0,0,1);
+	margin-bottom:15px;
+}
+
+/* achtung: alle Wissen-kompakt-HTML-Beiträge haben Padding li und re von 30. Nur hier 40px !!! */
+#content{
+	max-width: 950px;
+	margin: 0 auto;
+	background: white;
+	padding:10px 40px 20px 40px;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+
+}
+
+header {
+	max-width:950px;
+	height:90px;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	background: #feb913; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#ffc627, #feae13); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#ffc627, #feae13); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#ffc627, #feae13); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#ffc627, #feae13); /* Standard syntax */
+}
+
+header img {
+	float:right;
+	margin-top:12px;
+	margin-right:12px;
+}
+
+h1, h2 {
+	font-weight:700;
+	font-size:1.9em;
+	}
+	
+h2 {
+	font-size:1.5em;
+	margin-bottom:0;
+}
+
+h3 {
+	font-size:1.25em;
+	margin-bottom:0;
+}
+
+/* wird nur als Produktübeschrift / Titel verwendet */
+h4 {
+	font-size:1.1em;
+	margin: 0 0 0.7em 0;
+}
+
+figure {
+	margin: 0 auto;
+}
+figure img { width:100%; }
+
+.bold { font-weight:700; }
+
+.semi-bold { font-weight:400; }
+
+.small { font-size: 0.85em; }
+
+.bigger { font-size:1.2em; }
+
+.white { color:white; }
+
+.grey0 { color:#d7d7d7; } /*sehr helles grau */
+.grey { color: #828181; }
+.grey2 { color:#6d778c; } /* wie h1 */
+.grey3 { color:#959eb2; }
+
+
+.grey_bg { background: #828181; }
+.grey2_bg { background:#6d778c; }
+.grey3_bg { background:#959eb2; }
+
+.blau1 { color:#0880f1; }
+.blau2 { color:#2391f8; }/*gleicher ton wie 1, ticken heller */
+.blau3 { color:#185d9e; } /* rgb: 24/93/158 */
+.blau4 { color:#0569d0; }
+.blau5 { color:#216bc1; }
+
+.gruen { color:#09b17e; }
+.gruen_bg { background:#09b17e; }
+
+.hellgelb { color:#fde087; }
+
+.blau1_bg { background:#0880f1; }
+.blau2_bg { background:#2391f8; }
+.blau4_bg { background:#0569d0; }
+.blau5_bg { background:#216bc1; }
+
+.pink { color:#f8056c; }
+.dunkel-pink { color:#f8056c; }
+.dunkel-pink2 { color:#d81548; }
+
+.dunkel-pink2_bg { background:#d81548; }
+
+.hellgelb_bg { background:#fde087; }
+
+.underlined_dashed { border-bottom:1px dashed; }
+.underlined_solid  { border-bottom:1px solid; }
+
+.text-schatten {text-shadow:1px 2px 0 rgba(0,0,0,0.4);}
+
+
+.initial_sichtbar, .sichtbar, #img-formfaktoren-gross, #img-key-b-m-gross, #img-key-a-e-gross, div#support-signals_overview_gross  { display:block; }
+
+.initial_unsichtbar, .unsichtbar, #img-formfaktoren-klein,#img-key-b-m-klein, #img-key-a-e-klein, div#support-signals_overview_klein  { display:none; }
+
+.zentriert { text-align:center; }
+
+.nicht-getrennt { hyphens:none !important; }
+
+section {
+	padding-bottom:1em;
+	padding-top:1.3em;
+}
+
+section#eins{ padding-top:0; }
+
+section#drei { padding-bottom:0;}
+
+/* div.left und div.right sind für die platzierung von inhalt = hälfte text / hälfte bild gedacht siehe z.b. nss */
+div.left { 
+	float:left; 
+	width:48.5%;
+	margin-right:3%;
+	position:relative;
+	}
+
+div.right { 
+	float:right; 
+	width:48.5%;
+	}
+	
+div.left img, div.right img {
+	width:100%;
+	}
+	
+#home {
+  display:none;
+	cursor:pointer;
+	width:150px;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	padding:5px 0;
+	color:#6d778c; /* grau */
+	/*color:#0ab0fe; blau */
+	background:rgba(255,255,255,0.8);
+	border:1px solid;
+	font-size:0.95em;
+	text-align:center;
+	position:fixed;
+	bottom:100px;
+	left:50%;
+	margin-left:324px;
+	
+	}
+	
+#home:hover {
+	color:black;
+}
+
+footer {
+	max-width:950px;
+	height:45px;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	box-sizing:border-box;
+	background: #feb913; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#ffc627, #feae13); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#ffc627, #feae13); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#ffc627, #feae13); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#ffc627, #feae13); /* Standard syntax */
+	text-align:center;
+	}
+	
+	
+footer img {
+	margin-top:12px;
+}
+
+div#copyright {
+	margin:0 auto;
+	font-size:0.95em;
+	letter-spacing:0.005em;
+	color: #9099ae;
+	text-align:center;
+	margin-bottom:50px;
+	text-shadow: 0 1px 0 rgba(0,0,0,0.7); 
+}
+
+/* end general ########################### 
+**/	
+
+/* start specials ########################### 
+**/	
+
+
+/* Abstände, wenn Bild oder Box platziert, nach oben, damit gleiche Höhe wie Text */
+div.right figure, div.left figure  {
+	margin-top:20px;
+}
+/* extra Abstand */
+.extra-abstand { margin-top:2em; }
+
+.block-heading {
+	color:white;
+	margin-left:-45px;
+	margin-right:-40px;
+	padding:10px 0 10px 45px;
+	box-shadow:1px 3px 5px rgba(0,0,0,0.5);
+}
+
+/* tabelle: welcher key unterstützt welches signal */
+div#support-signals_overview_gross {
+	margin-top:3em;
+}
+
+div#support-signals_overview_klein{
+	margin-top:2em;
+}
+
+table {
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	padding: 0.3em;
+	color:white;
+	width:100%;
+}
+
+table td {
+	padding: 0.3em;
+	
+	}
+	
+table td.unter-td {
+	padding: 0.3em 0 0.3em 0.7em;
+	
+	}
+
+table th {
+	padding:0 0 0.4em 0;
+	font-weight:400;
+	font-size:1.1em;
+}
+
+
+/* end specials ########################### 
+**/
+
+/* # # # # # # # # # # # # START Produkte - - - # # # # # # # # # # # */
+
+/*struktur die Produkte betreffend: .produkt enthält je .produkt_foto sowie .produkt_text*/
+/* .produkt_foto enthält je Anker sowie Img // .produkt_text enthält je h3 sowie eigenschaften */
+div.produkt {
+	margin-top:30px;
+	padding-bottom:10px;
+	border-bottom:1px dashed rgba(0,0,0,0.17);
+	position:relative;
+	
+}
+
+/* je das letzte Produkt vor Start der neuen Kategorie soll keine Border bottom haben */
+#produkt62704 , #produkt62591, #produkt54793 {
+	border-bottom:0;
+	
+}
+
+/* für den fall dass mini wenig text, und Art.button zu sehr am Folgenden klebend, muss abstand nach unten rein  */
+#produkt62751, #produkt62591  {
+	padding-bottom: 1.5em;
+}
+
+.produkt_foto {
+	width:40%;
+	float:left;
+	}
+	
+/* da bildmaterial bis unten ran, muss abstand zum Linkbutton darunter sein, deshalb hier margin */
+.produkt_foto img {
+	width:100%;
+	margin-bottom:1.5em;
+}
+/* da bei folgenden fotos unten links weißraum und dafür wenig spezifikationen, sieht das oben gesetzte margin-bottom doof aus: hier also wieder aufheben */
+#produkt62591 .produkt_foto img { 
+	margin-bottom:0;
+	}
+
+
+div.produkt_text {
+	width:57%;	
+	float:right;
+	margin-left:3%;
+}
+div.produkt_text h3 { 
+	margin-top:0;
+}
+div.produkt_text p {
+	font-size:0.9em;
+	text-align:left;
+}
+
+/* hat sehr wenig spezifikationen im ggs zu den anderen; braucht abstand nach unten */
+#produkt89535 {
+	margin-bottom:2.5em;
+}
+
+/* die produkttexte haben zuerst breaks bei zu langen zeilen, dies funktioniert bei schmalerer desktop-width nicht mehr, deshalb gegen p ohne breaks innerhalb eines stichpunktes ausgetauscht, bei 562px */
+div.produkt_text p.ohne-breaks, .ohne-breaks { display:none; }
+
+/* dieser Link ist Button-like */
+div.produkt_foto a {
+	text-decoration:none;
+	color:white;
+	padding: 8px 23px 7px 20px;
+	
+	}
+/* a hat klasse blau5_bg: diese Farbe #0849aa ist dunkler und matter */	
+div.produkt_foto a:hover {
+	background: #0849aa; 
+	}
+
+/* dieser Link wrappt die Produkttitel (h4) */
+div.produkt_text a {
+	text-decoration:none;
+	
+}
+div.produkt_text a:hover {
+	color:black;
+}
+
+/* dieser Link ist im Text, weist z. B. auf andere Längen hin, nicht Button-like */
+div.produkt_text a.anker-im-text {
+	
+	font-weight:400;
+	color:#216bc1; 
+	
+}
+div.produkt_text a.anker-im-text:hover {
+	color:#0849aa;
+}
+
+a#product-overview {
+	text-align:center;
+	display:block;
+	padding: 1em 0.5em;
+	margin:1.6em 0 0 0;
+	text-decoration:none;
+	font-size:1.2em;
+}
+a#product-overview:hover {
+	background:#0849aa; /*dunkleres blau */
+}
+
+/* start special anwendungsgrafiken ########################### 
+**/	
+
+span.show_anwendungsgrafik {
+	cursor:pointer;
+	font-weight:400;
+	background:#d81548; 
+	color:white;
+	padding: 0.2em 1.4em 0.3em 1em;
+}
+
+span.show_anwendungsgrafik:hover {
+	
+	background:#f8056c;/*hell*/
+}
+
+/* anwendungsgrafiken als einblendbare elemente haben .anwendung und id: für das onclick-event. sobald ziffern in der id-bezeichnung, funktioniert css nicht: also als ZAHLWORT */
+div#sechszweisiebzigvier_anwendung, div#achtneunfuenfsiebzehn_anwendung {
+	max-width:870px;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	z-index:1000;
+	padding: 1em 0 0.7em 1em;
+	position:absolute;
+	left:0;
+	top:0;
+	background:white;
+	border:1px solid rgba(0,0,0,0.5);
+	box-shadow:0 5px 7px rgba(0,0,0,0.5);
+	}  
+	
+div#sechszweisiebzigvier_anwendung img, div#achtneunfuenfsiebzehn_anwendung img  {
+	width:100%;
+}
+
+div#sechszweisiebzigvier_anwendung span, div#achtneunfuenfsiebzehn_anwendung span {
+	cursor:pointer;
+	color:#d81548; /*dunkel*/
+	font-weight:400;
+}
+div#sechszweisiebzigvier_anwendung span:hover, div#achtneunfuenfsiebzehn_anwendung span:hover {
+	color:#f8056c;/*hell*/
+}
+
+/* end special anwendungsgrafiken ########################### 
+**/
+
+/* # # # # # # # # # # # # END (Einzel-) Produkte - - - # # # # # # # # # # # */	
+
+
+
+/* # # #  media queries # # # */
+
+@media screen and (max-width:982px) {
+#home {
+	bottom:100px;
+	left:inherit;
+	right:9px;
+	margin-left:0;
+	}
+}
+
+@media screen and (max-width:960px) {
+
+p { line-height:1.3em; }
+
+
+.produkt_foto {
+	width:38%;
+	float:left;
+	}
+
+div.produkt_text {
+	width:60%;	
+	float:right;
+	margin-left:2%;
+}
+
+}
+
+@media screen and (max-width:875px) {
+
+
+.produkt_foto {
+	width:100%;
+	float:none;
+	
+	}
+	
+.produkt_foto img {
+	width:60%;
+}
+	
+div.produkt_text {
+	width:100%;	
+	float:none;
+	margin-left:0;
+	margin-top:20px;
+}
+
+}
+
+/* hier teaserbild austauschen: vom quadratischen Format zum länglichen:
+hierfür gibt es die klassen initial_sichtbar und initial_unsichtbar */
+@media screen and (max-width:835px) {
+
+
+h1 { font-size:1.6em; }
+h2 { font-size:1.4em; }
+h3, h4 { font-size:1.15em; }
+
+.initial_sichtbar { display:none; }
+
+.initial_unsichtbar { display:block; }
+
+div.left { 
+	float:none; 
+	width:100%;
+	margin-right:0;
+	}
+
+div.right { 
+	float:none; 
+	width:100%;
+	margin-top:0;
+	}
+
+}
+
+@media screen and (max-width:770px) {
+
+.produkt_foto img {
+	width:70%;
+}
+
+}
+
+@media screen and (max-width:700px) {
+div#sechszweisiebzigvier_anwendung {
+	padding: 0.5em 0 0.3em 0.5em;
+}  
+	
+
+div#sechszweisiebzigvier_anwendung span {
+	font-size:1em;
+	}
+
+}
+
+@media screen and (max-width:690px) {
+
+	
+}
+
+
+/* hier Formfaktoren Vergleich Grafik austauschen */
+@media screen and (max-width:650px) {
+
+#img-formfaktoren-gross  { display:none;}
+#img-formfaktoren-klein  { display:block;}
+
+}
+
+@media screen and (max-width:635px) {
+
+header {
+	text-align:center;
+}
+header img {
+	float:none;
+	margin-right:0;
+}
+
+div.home {
+	width:40%;
+	}
+}
+
+/* hier evtl keygrafik austauschen, wenn noch zeit: von rechteckig lang zu rechteckig hoch */
+@media screen and (max-width:620px) {
+
+#img-key-b-m-gross, #img-key-a-e-gross, div#support-signals_overview_gross   { display:none;}
+#img-key-b-m-klein, #img-key-a-e-klein, div#support-signals_overview_klein  { display:block;}
+
+
+}	
+
+@media screen and (max-width:562px) {
+
+div.produkt_text p.ohne-breaks, .ohne-breaks { display:block; }
+
+div.produkt_text p.mit-breaks, .mit-breaks { display:none; }
+
+a#product-overview {
+	font-size:1em;
+	margin:1em 0 0 0;
+}
+
+}	
+
+@media screen and (max-width:550px) {
+
+.produkt_foto img {
+	width:80%;
+}
+}
+
+@media screen and (max-width:545px) {
+
+
+
+}
+
+
+
+@media screen and (max-width:470px) {
+
+	
+.produkt_foto img {
+	width:100%;
+}
+
+}
+
+
+@media screen and (max-width:450px) {
+
+#content{
+	padding:10px 20px 10px 20px;
+	}
+	
+.block-heading {
+	color:white;
+	margin-left:-25px;
+	margin-right:-20px;
+	padding:10px 0 10px 25px;
+	box-shadow:1px 3px 5px rgba(0,0,0,0.5);
+}
+	
+#home {
+	bottom:100px;
+	left:inherit;
+	right:9px;
+	margin-left:0;
+	}
+	
+}
+
+@media screen and (max-width:420px) {
+
+
+h1 { font-size:1.4em; }
+h2 { font-size:1.2em; }
+h3 { font-size:1em; }
+h4 { font-size:1em; }
+
+}
+
+@media screen and (max-width:340px) {
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
